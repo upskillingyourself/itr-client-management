@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "345e88d8-bd41-43e0-880b-85882bba4cca",
+		"name": "toratax",
+		"description": "This is toratax collection.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17192902"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/toratax/rest/v1.0/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"9451728503\",\r\n    \"firstName\": \"Deepoo\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/toratax/rest/v1.0/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"toratax",
+						"rest",
+						"v1.0",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/toratax/rest/v1.0/login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "9451728502",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/toratax/rest/v1.0/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"toratax",
+						"rest",
+						"v1.0",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/toratax/rest/v1.0/itrrequest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "03a78fa0-aeeb-4665-ab86-f135519daf9d",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUT1JBVEFYIiwic3ViIjoiSldUIFRva2VuIiwidXNlcm5hbWUiOiI5NDUxNzI4NTAyIiwiYXV0aG9yaXRpZXMiOiJ1c2VyIiwiaWF0IjoxNzEzMjk0MTMxLCJleHAiOjE3MTMyOTgxMzF9.2iG35u46yYcOBjvPcc0yHrB7MRGARnPQ0YuKm3EPGvE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n   \"firstName\": \"\",\r\n   \"lastName\": \"\",\r\n    \"mobileNumber\": \"\",\r\n    \"emailId\": \"\",\r\n   \"userId\":\"951728502\",\r\n    \"itrYear\": \"2024\",\r\n    \"salaried\": \"true\",\r\n    \"pan\": \"AQAP345768\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/toratax/rest/v1.0/itrrequest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"toratax",
+						"rest",
+						"v1.0",
+						"itrrequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/toratax/rest/v1.0/fileupload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "904ed185-6b48-40ef-a338-42c1a1d6227b",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUT1JBVEFYIiwic3ViIjoiSldUIFRva2VuIiwidXNlcm5hbWUiOiI5NDUxNzI4NTAyIiwiYXV0aG9yaXRpZXMiOiJ1c2VyIiwiaWF0IjoxNzEzNDYzMzAwLCJleHAiOjE3MTM0NjczMDB9.5wb_HGEUEa_KC75rrE8zptu7B7E7nWrJu5c5k0jb28k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "document",
+							"type": "file",
+							"src": "/C:/Users/SANDEEP/Downloads/test-1/pqr.pdf"
+						},
+						{
+							"key": "info",
+							"value": "{\n\"typeId\":5\n}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/toratax/rest/v1.0/fileupload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"toratax",
+						"rest",
+						"v1.0",
+						"fileupload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/toratax/rest/v1.0/users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUT1JBVEFYIiwic3ViIjoiSldUIFRva2VuIiwidXNlcm5hbWUiOiI5NDUxNzI4NTAyIiwiYXV0aG9yaXRpZXMiOiJBRE1JTiIsImlhdCI6MTcxMzUwODIwOCwiZXhwIjoxNzEzNTEyMjA4fQ.TjIniDxRjHFNOHwCXulUsfs8hjIjlfPpOEAQGoBYelQ",
+						"type": "text"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "bdb7f51f-d2bb-4ff3-9ba7-22096f720803",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/toratax/rest/v1.0/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"toratax",
+						"rest",
+						"v1.0",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
